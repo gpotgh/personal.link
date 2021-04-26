@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p style="width: 26rem;">
+        {{ form.icon.label }}<br>
+        {{ form.icon(class="form-control-file", value=current_user.icon, id="photo", name="file") }}<br>
+        {% for error in form.icon.errors %}
+    <div class="alert alert-danger" role="alert" style="width: 26rem;">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p style="width: 26rem;">
+        {{ form.body.label }}<br>
+        {{ form.body(class="form-control", value=current_user.body) }}<br>
+        {% for error in form.body.errors %}
+    <div class="alert alert-danger" role="alert" style="width: 26rem;">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary", style="width: 9rem;") }}</p>
+    <a class="btn btn-primary" href="/v/{{ current_user.nickname }}">Просмотор</a>
+</form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="padding: 30px;">
+    <div class="card" style="width: 26rem;">
+        <div class="card-body">
+        <h4 class="card-title"><a href="http://127.0.0.1:8080/login">Personal.link</a></h4>
+        <h6 class="card-subtitle mb-2 text-muted"> - ресурс, предназначенный предоставления информации о себе</h6>
+        <p class="card-text">
+        </p>
+        <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8080/login'">Войти</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8080/register'">Зарегистрироваться</button>
+        </div>
+    </div>
+  </div>
+{% endblock %}

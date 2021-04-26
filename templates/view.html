@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if current_user.icon %}
+        <div class="text-center">
+            <div style="padding: 10px;">
+            <img src={{icon}} class="round" width="150">
+        </div>
+    {% endif %}
+    {% if current_user.body %}
+    <div class="card">
+        <div class="card-body" style="width: 56rem;">
+            {{ current_user.body }}
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
